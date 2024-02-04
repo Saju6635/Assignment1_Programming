@@ -66,7 +66,7 @@ class Program
             Console.WriteLine($"2. Play with {petName}");
             Console.WriteLine($"3. Let {petName} rest");
             Console.WriteLine($"4. Check {petName} Status");
-            Console.WriteLine("5.Exit");
+            Console.WriteLine("5. Exit");
             Console.WriteLine();
 
             Console.Write("User input: ");
@@ -139,7 +139,7 @@ class Program
             if(hunger >= 9 || happiness <= 2)
             {
                 Console.WriteLine();
-                Console.WriteLine($"{petName} seems negleted, it's healthis getting deteriorated, so he is getting unhappy too");
+                Console.WriteLine($"{petName} seems negleted, it's health is getting deteriorated, so he is getting unhappy too");
                 health= Math.Max(1,health - 1);
                 happiness= Math.Max(1,happiness - 1);
             }
