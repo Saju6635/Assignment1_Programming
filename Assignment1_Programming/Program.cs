@@ -6,9 +6,9 @@ class Program
     { 
         //pet type selection
 
-        Console.WriteLine("Choose a pet type \n 1.Cat \n 2.Rabbit \n 3.Dog ");
+        Console.WriteLine("Choose a pet type: \n 1.Cat \n 2.Rabbit \n 3.Dog ");
+        Console.WriteLine();
 
-        
 
         int petChoice;
 
@@ -20,6 +20,7 @@ class Program
 
             if (petChoice < 1 || petChoice > 3)
             {
+                Console.WriteLine();
                 Console.WriteLine("Invalid Input, Choose a valid input");
             }
         }
@@ -41,10 +42,11 @@ class Program
                 break;
                 
         }
-       //asking pet name from user
+        //asking pet name from user
+        Console.WriteLine();
         Console.Write($"You have chose a {petType}, Enter a name for your pet: ");
         string petName = Console.ReadLine();
-
+        Console.WriteLine();
         Console.WriteLine($"Welcome {petName}!, lets take good care of him");
 
         // setting up default pet status
@@ -59,12 +61,13 @@ class Program
         {
             //display main menu options
             Console.WriteLine("\nMain menu:");
-
+            Console.WriteLine("-----------");
             Console.WriteLine($"1. Feed {petName}");
             Console.WriteLine($"2. Play with {petName}");
             Console.WriteLine($"3. Let {petName} rest");
             Console.WriteLine($"4. Check {petName} Status");
             Console.WriteLine("5.Exit");
+            Console.WriteLine();
 
             Console.Write("User input: ");
             int menuChoice = Convert.ToInt32(Console.ReadLine());
@@ -72,12 +75,14 @@ class Program
             switch (menuChoice)
             {
                 case 1:
+                    Console.WriteLine();
                     Console.WriteLine($"You fed {petName}, his hunger decreases and health increased slightly ");
-                    hunger = Math.Max(1, hunger - 2);
+                    hunger = Math.Max(1, hunger - 1);
                     health = Math.Min(10, health + 1) ;
                     break;
 
                 case 2:
+                    Console.WriteLine();
                     if (hunger >= 10)
                     {
                         Console.WriteLine($"{petName} is too hungry so he can't play now, please feed him");
@@ -86,11 +91,12 @@ class Program
                     {
                         Console.WriteLine($"You played with {petName}, his hunger slightly increased and happiness increased a lot too ");
                         hunger = Math.Min(10, hunger + 1);
-                        happiness = Math.Min(10, happiness + 2);
+                        happiness = Math.Min(10, happiness + 1);
                     }
                     break;
 
                 case 3:
+                    Console.WriteLine();
                     if (happiness <= 1)
                     {
                         Console.WriteLine($"{petName} is too unhappy to rest now , so play with him first");
@@ -98,13 +104,15 @@ class Program
                     else
                     {
                         Console.WriteLine($"You let {petName} rest, health increased but happiness decreased slightly");
-                        health = Math.Min(10, health + 2);
+                        health = Math.Min(10, health + 1);
                         happiness = Math.Max(1, happiness - 1);
                     }
                     break;
 
                 case 4:
+                    Console.WriteLine();
                     Console.WriteLine($"{petName}'s status");
+                    Console.WriteLine("-------------------");
                     Console.WriteLine($"- Hunger: {hunger}");
                     Console.WriteLine($"- Happiness: {happiness}");
                     Console.WriteLine($"- Health: {health}");
@@ -117,22 +125,23 @@ class Program
 
                 case 5:
                     exitReq = false;// set exitReq to false to exit loop
-                    Console.WriteLine($"bye, Thanks for being with {petName}");
+                    Console.WriteLine($"bye, Thanks for being with {petName} :)");
                     break; 
 
                 default:
+                    Console.WriteLine();
                     Console.WriteLine("Invalid input. Please valid input");
                     break;
                
 
             }
-
+            // negleted caase
             if(hunger >= 9 || happiness <= 2)
             {
                 Console.WriteLine();
                 Console.WriteLine($"{petName} seems negleted, it's healthis getting deteriorated, so he is getting unhappy too");
-                health= Math.Max(1,health - 2);
-                happiness= Math.Max(1,happiness - 2);
+                health= Math.Max(1,health - 1);
+                happiness= Math.Max(1,happiness - 1);
             }
 
         }
