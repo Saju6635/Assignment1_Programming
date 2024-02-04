@@ -3,10 +3,10 @@
 class Program
 {
     static void Main(string[] args)
-    { 
+    {
         //pet type selection
-
-        Console.WriteLine("Choose a pet type: \n 1.Cat \n 2.Rabbit \n 3.Dog ");
+        Console.WriteLine("Welcome to Virtual Pet Simulator ! \n");
+        Console.WriteLine("Choose a pet type you want :\n \n 1.Cat \n 2.Rabbit \n 3.Dog ");
         Console.WriteLine();
 
 
@@ -21,7 +21,7 @@ class Program
             if (petChoice < 1 || petChoice > 3)
             {
                 Console.WriteLine();
-                Console.WriteLine("Invalid Input, Choose a valid input");
+                Console.WriteLine("Invalid Input, Choose a valid input.");
             }
         }
         while (petChoice < 1 || petChoice > 3);
@@ -47,7 +47,7 @@ class Program
         Console.Write($"You have chose a {petType}, Enter a name for your pet: ");
         string petName = Console.ReadLine();
         Console.WriteLine();
-        Console.WriteLine($"Welcome {petName}!, lets take good care of him");
+        Console.WriteLine($"Welcome {petName}!, lets take good care of him.");
 
         // setting up default pet status
         int hunger = 4;
@@ -76,7 +76,7 @@ class Program
             {
                 case 1:
                     Console.WriteLine();
-                    Console.WriteLine($"You fed {petName}, his hunger decreases and health increased slightly ");
+                    Console.WriteLine($"You fed {petName}, his hunger decreases and health increased slightly. ");
                     hunger = Math.Max(1, hunger - 1);
                     health = Math.Min(10, health + 1) ;
                     break;
@@ -85,11 +85,11 @@ class Program
                     Console.WriteLine();
                     if (hunger >= 10)
                     {
-                        Console.WriteLine($"{petName} is too hungry so he can't play now, please feed him");
+                        Console.WriteLine($"{petName} is too hungry so he can't play now, please feed him.");
                     }
                     else
                     {
-                        Console.WriteLine($"You played with {petName}, his hunger slightly increased and happiness increased a lot too ");
+                        Console.WriteLine($"You played with {petName}, his hunger slightly increased and happiness increased a lot too. ");
                         hunger = Math.Min(10, hunger + 1);
                         happiness = Math.Min(10, happiness + 1);
                     }
@@ -99,11 +99,11 @@ class Program
                     Console.WriteLine();
                     if (happiness <= 1)
                     {
-                        Console.WriteLine($"{petName} is too unhappy to rest now , so play with him first");
+                        Console.WriteLine($"{petName} is too unhappy to rest now , so play with him first .");
                     }
                     else
                     {
-                        Console.WriteLine($"You let {petName} rest, health increased but happiness decreased slightly");
+                        Console.WriteLine($"You let {petName} rest, health increased but happiness decreased slightly .");
                         health = Math.Min(10, health + 1);
                         happiness = Math.Max(1, happiness - 1);
                     }
