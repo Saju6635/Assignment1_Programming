@@ -42,7 +42,7 @@ class Program
                 
         }
        //asking pet name from user
-        Console.WriteLine($"You have chose a {petType}, Enter a name for your pet: ");
+        Console.Write($"You have chose a {petType}, Enter a name for your pet: ");
         string petName = Console.ReadLine();
 
         Console.WriteLine($"Welcome {petName}!, lets take good care of him");
@@ -59,13 +59,14 @@ class Program
         {
             //display main menu options
             Console.WriteLine("\nMain menu:");
+
             Console.WriteLine($"1. Feed {petName}");
             Console.WriteLine($"2. Play with {petName}");
             Console.WriteLine($"3. Let {petName} rest");
             Console.WriteLine($"4. Check {petName} Status");
             Console.WriteLine("5.Exit");
 
-            Console.WriteLine("User input: ");
+            Console.Write("User input: ");
             int menuChoice = Convert.ToInt32(Console.ReadLine());
 
             switch (menuChoice)
@@ -124,6 +125,14 @@ class Program
                     break;
                
 
+            }
+
+            if(hunger >= 9 || happiness <= 2)
+            {
+                Console.WriteLine();
+                Console.WriteLine($"{petName} seems negleted, it's healthis getting deteriorated, so he is getting unhappy too");
+                health= Math.Max(1,health - 2);
+                happiness= Math.Max(1,happiness - 2);
             }
 
         }
