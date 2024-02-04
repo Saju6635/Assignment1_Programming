@@ -90,7 +90,11 @@ class Program
                     Console.WriteLine($"- Hunger: {hunger}");
                     Console.WriteLine($"- Happiness: {happiness}");
                     Console.WriteLine($"- Health: {health}");
-                     break;
+                    //status check with warning
+                    Console.WriteLine(hunger <= 2 ? $"Warning :{petName}'s is not that hungry!" : hunger >= 9 ? $"Warning: {petName}'sHunger is critically high!" : "");
+                    Console.WriteLine(happiness <= 2 ? $"Warning: {petName}'s Happiness is critically low!" : happiness >= 9 ? $"Warning: {petName}'s Happiness is too good!" : "");
+                    Console.WriteLine(health <= 2 ? $"Warning: {petName}'s Health is critically low!" : health >= 9 ? $"Warning:{petName}'s Health is too good!" : "");
+                    break;
                 case 5:
                     exitReq = false;// set exitReq to false to exit loop
                     Console.WriteLine("bye");
