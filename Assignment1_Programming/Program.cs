@@ -50,9 +50,9 @@ class Program
         Console.WriteLine($"Welcome {petName}!, lets take good care of him");
 
         // setting up default pet status
-        int hunger = 3;
+        int hunger = 4;
         int happiness = 5;
-        int health = 7;
+        int health = 6;
 
         // while loop for pet care actions and viewing status
         bool exitReq = true;//setting true to enter the loop
@@ -118,9 +118,9 @@ class Program
                     Console.WriteLine($"- Health: {health}");
 
                     //status check with warning for critical stages
-                    Console.WriteLine(hunger <= 2 ? $"Warning :{petName}'s is not that hungry!" : hunger >= 9 ? $"Warning: {petName}'sHunger is critically high!" : "");
-                    Console.WriteLine(happiness <= 2 ? $"Warning: {petName}'s Happiness is critically low!" : happiness >= 9 ? $"Warning: {petName}'s Happiness is too good!" : "");
-                    Console.WriteLine(health <= 2 ? $"Warning: {petName}'s Health is critically low!" : health >= 9 ? $"Warning:{petName}'s Health is too good!" : "");
+                    Console.WriteLine(hunger <= 2 ? $"Warning :{petName}'s is not that hungry now!" : hunger >= 9 ? $"Warning: {petName}'s Hunger is critically high now!" : "");
+                    Console.WriteLine(happiness <= 2 ? $"Warning: {petName}'s Happiness is critically low now!" : happiness >= 9 ? $"Warning: {petName}'s Happiness is too good now!" : "");
+                    Console.WriteLine(health <= 2 ? $"Warning: {petName}'s Health is critically low now!" : health >= 9 ? $"Warning:{petName}'s Health is too good now!" : "");
                     break;
 
                 case 5:
