@@ -1,4 +1,4 @@
-Video Recording Link: 
+Video Recording Link: https://drive.google.com/file/d/1RCw_oYpPZlCbY6zwy14jTWm8anlA5-bm/view?usp=sharing
 
 # Visual Pet Simulator
 This is an console application that allowers users to care a virtual pet by feeding, playing and monitoring it's status.
